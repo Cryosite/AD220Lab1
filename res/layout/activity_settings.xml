@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutBackgroundColorDefault"
+    tools:context="com.mti.ad220lab1.SettingsActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:id="@+id/btnSettingsReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/btnSettingsReturn"
+        android:textColor="@color/defaultTextColor" />
+
+    <TextView
+        android:id="@+id/tvSettingsSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSettingsReturn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimSettingsMainSpacing"
+        android:text="@string/tvSettingsSize"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/defaultTextColor" />
+
+    <TextView
+        android:id="@+id/tvSettingsCircleCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSettingsReturn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimSettingsMainSpacing"
+        android:text="@string/tvSettingsCircleCount"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/defaultTextColor" />
+
+    <Button
+        android:id="@+id/btnSettingsSizeMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSettingsSize"
+        android:layout_alignBottom="@+id/tvSettingsSize"
+        android:layout_toRightOf="@+id/tvSettingsSize"
+        android:text="@string/btnSettingsMinus"
+        android:textColor="@color/defaultTextColor" />
+
+    <Button
+        android:id="@+id/btnSettingsSizePlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSettingsSize"
+        android:layout_alignBottom="@+id/tvSettingsSize"
+        android:layout_toLeftOf="@+id/tvSettingsSize"
+        android:text="@string/btnSettingsPlus"
+        android:textColor="@color/defaultTextColor" />
+
+    <Button
+        android:id="@+id/btnSettingsPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSettingsCircleCount"
+        android:layout_alignBottom="@+id/tvSettingsCircleCount"
+        android:layout_toLeftOf="@+id/tvSettingsCircleCount"
+        android:text="@string/btnSettingsPlus"
+        android:textColor="@color/defaultTextColor" />
+
+    <Button
+        android:id="@+id/btnSettingsMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSettingsCircleCount"
+        android:layout_alignBottom="@+id/tvSettingsCircleCount"
+        android:layout_toRightOf="@+id/tvSettingsCircleCount"
+        android:text="@string/btnSettingsMinus"
+        android:textColor="@color/defaultTextColor" />
+
+</RelativeLayout>

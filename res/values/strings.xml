@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">AD220Lab1</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="btnStartContinue">Continue</string>
+    <string name="btnSettingsReturn">Return</string>
+    <string android:id="@+id/string1" android:layout_width="wrap_content" android:layout_height="wrap_content" name="tvSettingsCircleCount">Circles per touch: #</string>
+    <string android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/string1" name="tvSettingsSize">Size of circles: #</string>
+    <string android:id="@+id/string1" android:layout_height="wrap_content" android:layout_width="wrap_content" name="btnSettingsPlus">[+]</string>
+    <string android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/string1" name="btnSettingsMinus">[-]</string>
+    <string name="tvAbout">Tap the screen to spawn circles of random colors, which drift off in random directions. Shake your device to mess with them. Reorient the device to wipe the screen and start over.</string>
+
+</resources>
