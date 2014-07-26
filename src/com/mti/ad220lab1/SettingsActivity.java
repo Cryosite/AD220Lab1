@@ -7,14 +7,18 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SettingsActivity extends ActionBarActivity implements OnClickListener {
+public class SettingsActivity extends ActionBarActivity implements OnClickListener, OnItemSelectedListener {
 //Layout Controls
 	//App navigation
 	private Button btnReturn;
+	private Spinner spnrMode;
 	//Circle Count
 	private TextView tvCircleCount;
 	private int circleCount;
@@ -38,9 +42,11 @@ public class SettingsActivity extends ActionBarActivity implements OnClickListen
 	//Layout
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
-		//return
+		//app Navigation
 		btnReturn = (Button) findViewById(R.id.btnSettingsReturn);
 		btnReturn.setOnClickListener(this);
+		spnrMode = (Spinner) findViewById(R.id.spnrSettingsMode);
+		spnrMode.setOnItemSelectedListener(this);
 		//Circle Count
 		tvCircleCount = (TextView) findViewById(R.id.tvSettingsCircleCount);
 		btnPlus = (Button) findViewById(R.id.btnSettingsPlus);
@@ -132,5 +138,22 @@ public class SettingsActivity extends ActionBarActivity implements OnClickListen
 		}//endif - (v.getId() == R.id.btnSettingsSizePlus)
 		
 	}//onClick(View v)
+
+	@Override
+	public void onItemSelected(AdapterView<?> parent, View v, int position,
+			long id) {
+		
+		editor.putInt("Mode", spnrMode.getSelectedItemPosition());
+		editor.commit();
+		Toast.makeText(this, "Mode selected: " + settings.getInt("Mode", 5), Toast.LENGTH_SHORT).show();
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> parent) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }//class

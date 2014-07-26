@@ -1,5 +1,7 @@
 package com.mti.ad220lab1;
 
+import java.io.File;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -17,6 +19,8 @@ public class StartActivity extends ActionBarActivity implements OnClickListener 
 		
 		btnContinue = (Button) findViewById(R.id.btnStartContinue);
 		btnContinue.setOnClickListener(this);
+		
+		//File file = new File(this.getFilesDir(), "save.ser");
 		
 	}//onCreate(Bundle savedInstanceState)
 
